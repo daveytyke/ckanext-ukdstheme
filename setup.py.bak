@@ -84,7 +84,7 @@ setup(
     # pip to create the appropriate form of executable for the target platform.
     entry_points='''
         [ckan.plugins]
-        ukdstheme=ckanext.ukdstheme.plugin:UKDSThemePlugin
+        ukdstheme=ckanext.ukdstheme.plugin:CustomisedFieldsFromTagVocabularyPlugin
 
         [babel.extractors]
         ckan = ckan.lib.extract:extract_ckan
