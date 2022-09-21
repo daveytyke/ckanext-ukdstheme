@@ -1,0 +1,34 @@
+{% ckan_extends %}
+
+  {% macro newactor(activity) %}
+    <span class="actor">
+      {% if h.check_access('sysadmin') %}
+        {{ h.linked_user(activity.user_id, 0, 30) }}
+      {% else %}
+        <b>{{ _('Sysadmin') }}</b>
+      {% endif %}
+    </span>
+  {% endmacro %}
+
+  {% block activity_stream %}  
+    {% if h.check_access('sysadmin') %}
+      <ul class="activity">
+        {% set can_show_activity_detail = h.check_access('sysadmin') and h.check_access('activity_list', {'id': id, 'include_data': True, 'object_type': object_type}) %}
+        {% for activity in activity_stream %}
+          {%- snippet "snippets/activities/{}.html".format(
+            activity.activity_type.replace(' ', '_')
+            ), "snippets/activities/fallback.html",
+            activity=activity, can_show_activity_detail=can_show_activity_detail, ah={
+              'actor': newactor,
+              'dataset': dataset,
+              'organization': organization,
+              'user': user,
+              'group': group,
+            }, id=id
+          -%}
+        {% endfor %}
+      </ul>  
+    {% else %}
+      <p class="empty">{{ _('This page is for sysadmin only') }}</span>
+    {% endif %}
+  {% endblock %}
