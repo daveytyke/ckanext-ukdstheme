@@ -73,7 +73,7 @@ None at present
 To install ckanext-ukdstheme for development, activate your CKAN virtualenv and
 do:
 
-    git clone https://github.com//ckanext-ukdstheme.git
+    git clone https://github.com/JiscSD/ckanext-ukdstheme.git
     cd ckanext-ukdstheme
     python setup.py develop
     pip install -r dev-requirements.txt
