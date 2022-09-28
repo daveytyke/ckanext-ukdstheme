@@ -3,14 +3,15 @@
 '''plugin.py
 
 '''
+import random
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 
+def get_bg_css():
+    return random.randint(1,10)
 
 class UKDSThemePlugin(plugins.SingletonPlugin):
-    '''An example theme plugin.
-
-    '''
+    plugins.implements(plugins.ITemplateHelpers)
     # Declare that this class implements IConfigurer.
     plugins.implements(plugins.IConfigurer)
 
@@ -22,3 +23,8 @@ class UKDSThemePlugin(plugins.SingletonPlugin):
         # plugin.py file.
         toolkit.add_template_directory(config, 'templates')
         toolkit.add_public_directory(config, 'public')
+
+    # ITemplateHelpers
+
+    def get_helpers(self):
+        return {'get_bg_css': get_bg_css}
