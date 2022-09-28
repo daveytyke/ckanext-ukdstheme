@@ -1,0 +1,7 @@
+{% ckan_extends %}
+
+{% set bg_image_no = h.get_bg_css() %}
+{% block custom_styles %}
+  {{ super() }}
+  <link rel="stylesheet" href="/bg-{{bg_image_no}}.css" /> 
+{% endblock %}
