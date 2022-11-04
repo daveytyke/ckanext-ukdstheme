@@ -37,16 +37,46 @@ To install ckanext-ukdstheme:
 ```
 2. Clone the source and install it on the virtualenv
 ```
-    git clone https://github.com/JiscSD/ckanext-ukdstheme.git
+	cd /usr/lib/ckan/default/src
+    sudo git clone https://github.com/JiscSD/ckanext-ukdstheme.git
     cd ckanext-ukdstheme
     pip install -e .
 	pip install -r requirements.txt
+	
+	then reset the permissions for the new ckanext-ukdstheme directory to 'ckan'
 ```
 3. Add `ukdstheme` to the `ckan.plugins` setting in your CKAN
    config file (by default the config file is located at
    `/etc/ckan/default/ckan.ini`).
 
 4. Restart CKAN. For example if you've deployed CKAN with Apache on Ubuntu:
+```
+     sudo service apache2 reload
+```
+or if the server is on AWS, called
+```
+     sudo reboot now 
+```
+
+## Updating to a new version
+
+To update ckanext-ukdstheme:
+
+1. Activate your CKAN virtual environment, for example:
+```
+     . /usr/lib/ckan/default/bin/activate
+```
+2. pull the latest version then install it on the virtualenv
+```
+	cd /usr/lib/ckan/default/src/ckanext-ukdstheme
+    sudo git pull
+    pip install -e .
+	pip install -r requirements.txt
+	
+	then reset the permissions for the ckanext-ukdstheme directory to 'ckan'
+```
+
+3. Restart CKAN. For example if you've deployed CKAN with Apache on Ubuntu:
 ```
      sudo service apache2 reload
 ```
