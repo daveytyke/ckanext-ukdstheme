@@ -4,6 +4,8 @@
         background-repeat: no-repeat;
         background-clip: border-box;
         background-position-y: 75%;
+        /* Make the bg use the whole screen width */
+        background-size: cover;
     }
     .hero:after {
       background-color: rgba(0, 0, 0, 0.09);
