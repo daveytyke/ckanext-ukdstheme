@@ -11,6 +11,7 @@ It includes display control on the CKAN to ensure UKDS Theme is applied and bloc
 3. Front page background handling
 4. Blockage of Activity Stream access for normal site visitor
 5. Fix for template issue on CKAN [No. 6931](https://github.com/ckan/ckan/issues/6931)
+6. "Machine-readable data" section in the dataset page. Only visible when DCAT extension is installed.
 
 
 ## Requirements
