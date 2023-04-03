@@ -12,3 +12,7 @@
  .MRD_info {
     cursor: pointer;
  }
+
+.no_display {
+   display: none;
+}
