@@ -20,12 +20,13 @@ This plugin is developed and tested on CKAN version 2.9
 
 Compatibility with core CKAN versions:
 
-| CKAN version    | Compatible?   |
-| --------------- | ------------- |
-| 2.6 and earlier | no            |
-| 2.7             | no            |
-| 2.8             | not tested    |
-| 2.9             | yes    	      |
+| CKAN version    | Compatible? |
+|-----------------|-------------|
+| 2.6 and earlier | no          |
+| 2.7             | no          |
+| 2.8             | not tested  |
+| 2.9             | yes    	    |
+| 2.11            | yes         |
 
 
 ## Installation
