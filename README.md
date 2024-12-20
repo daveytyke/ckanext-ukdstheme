@@ -141,6 +141,18 @@ If ckanext-ukdstheme should be available on PyPI you can follow these steps to p
        git tag 0.0.1
        git push --tags
 
+## Daves revised update instructions
+1. Activate your CKAN virtual environment, for example:
+```
+     	. /usr/lib/ckan/default/bin/activate
+	cd /usr/lib/ckan/default/src/ckanext-ukdstheme
+   	sudo git pull
+	sudo python setup.py develop
+	sudo chown ckan:ckan * -R
+	sudo systemctl restart nginx
+    
+    
+
 ## License
 
 [MIT](https://opensource.org/licenses/MIT)
