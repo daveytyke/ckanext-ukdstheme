@@ -9,15 +9,12 @@ ukdstheme-js:
 
 cookie-banner-js:
   filter: rjsmin
-  output: ckanext-ukdstheme/-cookie-banner.js
+  output: ckanext-ukdstheme/cookie-banner.js
   contents:
     - js/civic.js
     - js/civic_config.js
     - js/civicproperty.js
     - js/cookie-list.js
-  extra:
-    preload:
-      - base/main
       
 
 ukdstheme-css:
