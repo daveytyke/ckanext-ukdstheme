@@ -4,5 +4,8 @@
 {% block custom_styles %}
   {{ super() }}
   <link rel="stylesheet" href="/bg-{{bg_image_no}}.css" /> 
-{% endblock %}
 
+{% endblock %}
+{% block cookie_banner %}
+      {% asset 'ukdstheme/cookie-banner-js' %}
+{% endblock %}
