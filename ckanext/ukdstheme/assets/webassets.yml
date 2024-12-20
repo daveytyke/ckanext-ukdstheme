@@ -9,7 +9,7 @@ ukdstheme-js:
 
 cookie-banner-js:
   filter: rjsmin
-  output: ckanext-ukdstheme/cookie-banner.js
+  output: ckanext-ukdstheme/%(version)s-cookiebanner.js
   contents:
     - js/civic.js
     - js/civic_config.js
